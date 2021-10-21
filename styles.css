@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+.bannerColor{
+    background-color: #ffbb00;
+}
+
+.tabs a{
+    color:black;
+}
+
+.tabs a:hover{
+    color: white;
+    transition: 0.3s;
+}
+
+
+.menuItems{
+    font-size: 1.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mainBody{
+    flex: 1;
+}
+
+.padding1{
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+
+.dropdown-item{
+    color: black;
+}
+
+.dropdown-content{
+    color: black;
+}
+
+.card{
+    background-color: white;
+}
+
+.card-content{
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background-color: white;
+    color: rgb(49, 49, 49);
+    padding: 3rem 1.5rem;
+}
