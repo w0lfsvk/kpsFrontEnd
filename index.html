@@ -12,49 +12,61 @@
 </head>
 
 <body style="display: flex; min-height: 100vh; flex-direction:column;">
-  <section class="hero is-medium bannerColor">
-    <div class=" hero-body">
-      <div class="container has-text-centered logo">
-        <img src="img/logo.svg">
+  <nav class="navbar bannerColor" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="img/kpsLogoNew3.svg" alt="kpsLogoNew">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="contact.html">
+          Kontakt
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Sortiment
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button has-text-white has-background-black buttonBlackBorder" href="tel:+421905361241">
+              <strong><p class=" fas fa-phone-alt"></p> 0905 361 241</strong>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="hero-foot">
-      <nav class="tabs is-medium is-fullwidth has-text-centered ">
-        <div class="container menuItems is-hidden-mobile">
-          <ul class="">
-            <li><a href="index.html">Domov</a></li>
-            <li><a href="index.html">Sortiment</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="container">
-        <div class="dropdown is-hoverable is-hidden-desktop">
-          <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
-              <span class="icon is-medium">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu2" role="menu">
-            <div class="dropdown-content">
-              <a href="index.html" class="dropdown-item">
-                Domov
-              </a>
-              <hr class="dropdown-divider">
-              <a href="index.html" class="dropdown-item">
-                Domov
-              </a>
-              <hr class="dropdown-divider">
-              <a href="contact.html" class="dropdown-item">
-                Kontakt
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  </nav>
+
+
   </section>
 
   <section class="section" style="flex:1;">

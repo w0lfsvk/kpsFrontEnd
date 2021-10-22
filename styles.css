@@ -49,30 +49,22 @@ body{
     font-weight: 500;
 }
 
+.navbar {
+    min-height: 5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.navbar-item img {
+    max-height: 5rem;
+    height: 100%;
+    margin-right: 4rem;
+    max-width: 100%;
+}
+.buttonBlackBorder, .buttonNoBorder:hover, .buttonNoBorder.is-hovered
+{
+    border-color:black;
+}
 
 .footer{
     background-color: white;
