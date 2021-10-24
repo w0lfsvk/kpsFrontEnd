@@ -66,6 +66,17 @@ body{
     border-color:black;
 }
 
+.button:hover{
+    transition: 0.3s;
+    border-color: rgb(189, 189, 189);
+}
+
+a.navbar-item:hover{
+    color: black;
+    background-color: #ffbb00;
+}
+
+
 .footer{
     background-color: white;
     color: rgb(49, 49, 49);
