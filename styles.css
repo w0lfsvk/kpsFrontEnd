@@ -76,6 +76,17 @@ a.navbar-item:hover{
     background-color: #ffbb00;
 }
 
+.linksContact{
+    color: black;
+}
+
+.linksContact{
+    color: black;
+}
+
+.linksContact:hover{
+    text-shadow: 2px 2px 4px #dfdfdf;
+}
 
 .footer{
     background-color: white;
