@@ -16,7 +16,9 @@ https://www.dobrezeleziarstvo.sk/
   <link rel="stylesheet" href="bulma/css/bulma.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="fontAwesome/css/all.css">
-  <link rel="stylesheet" href="payment/lib/paymentMethods.min.css">
+  <link rel="stylesheet" href="payment/lib/paymentMethods.cards.min.css" type="text/css">
+  <link rel="stylesheet" href="payment/lib/paymentMethods.min.css" type="text/css">
+  <link rel="stylesheet" href="payment/lib/paymentApproaches.all.cards.min.css" type="text/css">
 </head>
 
 <body style="display: flex; min-height: 100vh; flex-direction:column;">
@@ -157,21 +159,24 @@ https://www.dobrezeleziarstvo.sk/
 
 
   <footer class="footer footerBackgrond">
-  <div class="columns">
-    <div class="column is-4 has-background-primary">
+  <div class="columns is-centered">
+    <div class="column is-narrow">
       <ul>
         <li class="nadpis">Kontakt</li>
         <li>Telefón: 0905 361 241</li>
         <li>E-mail: kps-trebatice@t-network.sk</li>
+        <li>&nbsp;</li>
+        <li style="font-size: 2.5rem;">
+        <i class="paymentMethod visa paymentMethod-card"></i>
+        <i class="paymentMethod mastercard paymentMethod-card"></i>
+        <i class="paymentMethod payWithGoogle paymentMethod-card"></i>
+        <i class="paymentMethod applePay paymentMethod-card"></i>
+        </li>
 
-        <li><i class="paymentMethod visa"></i></li>
-        <li><i class="paymentMethod mastercard"></i></li>
-        <li><i class="paymentMethod apple-pay"></i></li>
-        <li><i class="paymentMethod pay-with-google2"></i></li>
         </ul>
     </div>
     
-    <div class="column is-4 has-background-danger">
+    <div class="column is-narrow">
       <ul>
         <li class="nadpis">Kde nás nájdete?</li>
         <li>KPS Priemyselný tovar s.r.o</li>
@@ -182,9 +187,9 @@ https://www.dobrezeleziarstvo.sk/
       </ul>
     </div>
 
-    <div class="column is-4 has-background-warning">
+    <div class="column is-narrow">
       <ul>
-        <li class="nadpis">Otváracie hodiny:</li>
+        <li class="nadpis">Otváracie hodiny</li>
         <li>PO: Zatvorené</li>
         <li>UT: 8:00-12:30 13:00-16:30</li>
         <li>ST: 8:00-12:30 13:00-16:30</li>
@@ -194,8 +199,7 @@ https://www.dobrezeleziarstvo.sk/
         <li>NE: Zatvorené</li>
       </ul>
     </div>
-
-  <div>
+    
   </footer>
 
   <script type="text/javascript" src="bulma.js"></script>

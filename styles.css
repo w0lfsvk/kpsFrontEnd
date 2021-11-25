@@ -2,15 +2,19 @@
 
 body{
     font-family: 'Noto Sans Mono', monospace;
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(226, 226, 226);
 }
 
 .footerBackgrond{
-    background-color: rgb(255, 255, 255) !important
+    background-color: #ffbb00 !important;
 }
 
 .bannerColor{
     background-color: #ffbb00;
+}
+
+.backgroundColor{
+    background-color: rgb(255, 255, 255);
 }
 
 .tabs a{
@@ -163,10 +167,6 @@ a.navbar-item:hover{
 
 .section{
     padding: 3rem 0rem;
-}
-
-.backgroundColor{
-    background-color: rgb(255, 255, 255);
 }
 
 .nadpis{
