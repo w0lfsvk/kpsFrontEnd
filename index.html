@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--
+https://www.svx.sk/
+https://www.ro-expo.sk/index.html
+https://www.dobrezeleziarstvo.sk/
+ -->
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KPS Index</title>
-  <link rel="icon" type="image" href="/img/kpsLogoNew3.svg"/>
+  <link rel="icon" type="image" href="/img/KPSlogoNEW_NEW.svg"/>
   <link rel="stylesheet" href="bulma/css/bulma.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="fontAwesome/css/all.css">
@@ -16,17 +22,17 @@
   <nav class="navbar bannerColor" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="index.html">
-        <img src="img/kpsLogoNew3.svg" alt="kpsLogoNew">
+        <img src="img/KPSlogoNEW_NEW.svg" alt="kpsLogoNew">
       </a>
   
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <a role="button" class="navbar-burger has-dropdown" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
   
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbarBurger" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item" href="contact.html">
           Kontakt
@@ -37,7 +43,7 @@
             Sortiment
           </a>
   
-          <div class="navbar-dropdown">
+          <div class="navbar-dropdown is-hidden-mobile">
             <a class="navbar-item">
               Spojovací Materiál
             </a>
@@ -59,31 +65,85 @@
               Pletivá, siete, drôty
             </a>
             <hr class="navbar-divider">
-            <a class="navbar-item">
+            <a class="navbar-item" href="drogeria.html">
               Drogéria
             </a>
           </div>
         </div>
+
+        <a class="navbar-item" href="news.html">
+          Novinky
+        </a>
+
       </div>
   
       <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button has-text-white has-background-black buttonBlackBorder" href="tel:+421905361241">
+            <a class="navbar-item is-hidden-mobile" href="tel:+421905361241">
               <strong><p class=" fas fa-phone-alt"></p> 0905 361 241</strong>
             </a>
-          </div>
-        </div>
       </div>
     </div>
   </nav>
 
+  <section class="section fontSection" style="flex:1;" >
+    <div class="columns">
+      <div class="column is-1 is-hidden-mobile backgroundColor"></div>
+      <div class="column is-5 backgroundColor">
+        <h1 class="title is-1 fontSection" style="text-align: left;">
+          <strong>KPS</strong>
+        </h1>
+        <h2 class="subtitle is-4 fontSection">
+          Random text o firme, kedy, ako, preco
+        </h2>
+      </div>
 
+      <div class="column is-5 has-text-right backgroundColor" style="border-top-right-radius: 2rem; border-bottom-right-radius: 2rem;">
+        <figure >
+          <img class="landingImg1 is-inline-block is-hidden-mobile" src="photo/fotkaFirma.jpg" alt="landingImg">
+        </figure>
+      </div>
+
+    </div>
+
+    <div class="columns" style="margin-top: 5rem;">
+      <div class="column is-1 is-hidden-mobile"></div>
+      <div class="column is-5 has-text-left backgroundColor" style="border-top-left-radius: 2rem; border-bottom-left-radius: 2rem;">
+        <img class="landingImg2 is-inline-block is-hidden-mobile" src="photo/fotkaPonuka.jpg" alt="fotkaPonuka">
+      </div>
+
+      <div class="column is-5 backgroundColor">
+        <h1 class="title is-1 fontSection" style="text-align: right;">
+          <strong>Naša ponuka</strong>
+        </h1>
+        <h2 class="subtitle is-4 fontSection" style="text-align: right;">
+          Random text o ponuke, co vsetko mame
+        </h2>
+      </div>
+      <div class="column is-1 is-hidden-mobile backgroundColor"></div> 
+      </div>
+
+      
+      <div class="columns" style="margin-top: 5rem;">
+        <div class="column is-1 is-hidden-mobile backgroundColor"></div>
+        <div class="column is-5 backgroundColor">
+          <h1 class="title is-1 fontSection" style="text-align: left;">
+            <strong>Kde nás nájdete?</strong>
+          </h1>
+          <h2 class="subtitle is-4 fontSection">
+            Poloha, kontakt, ico, dic
+          </h2>
+        </div>
+  
+        <div class="column is-5 has-text-right backgroundColor" style="border-top-right-radius: 2rem; border-bottom-right-radius: 2rem;">
+            <figure class="is-inline-block is-hidden-mobile">
+              <iframe class="landingImg3" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d42221.80714336262!2d17.758529!3d48.593323!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6299a7824b563ec0!2sKPS%20-%20priemyseln%C3%BD%20tovar%2C%20s.r.o.!5e0!3m2!1sen!2sus!4v1614808582117!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </figure>
+        </div>
+  
+      </div>
+ 
   </section>
 
-  <section class="section" style="flex:1;">
-
-  </section>
 
 
 
@@ -95,32 +155,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <footer class="footer">
+  <footer class="footer footerBackgrond">
     <div class="content has-text-centered">
       <p>
         © 2021 KPS - priemyselný tovar, s.r.o
@@ -128,6 +163,9 @@
     </div>
   </footer>
 
+  <script type="text/javascript" src="bulma.js"></script>
+
 </body>
+
 
 </html>
