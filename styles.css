@@ -6,7 +6,7 @@ body{
 }
 
 .footerBackgrond{
-    background-color: rgb(197, 197, 197) !important
+    background-color: rgb(255, 255, 255) !important
 }
 
 .bannerColor{
@@ -167,4 +167,14 @@ a.navbar-item:hover{
 
 .backgroundColor{
     background-color: rgb(255, 255, 255);
+}
+
+.nadpis{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: black;
+}
+
+.thickText{
+    font-weight: 600;
 }

@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Payment Methods SVG Sample Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="test/css/normalize.min.css">
+        <link rel="stylesheet" href="test/css/main.css">
+
+		<link rel="stylesheet" href="lib/paymentMethods.cards.min.css" type="text/css">
+		<link rel="stylesheet" href="lib/paymentMethods.min.css" type="text/css">
+		<link rel="stylesheet" href="lib/paymentApproaches.all.cards.min.css" type="text/css">
+		<style>
+		
+			body{
+				margin: 1em;
+			}
+			.paymentMethod.paymentMethod-card:not(.disabled){
+				    -webkit-filter: drop-shadow(5px 5px 5px #222);
+			    filter: drop-shadow(5px 5px 5px #222);
+			}
+		</style>
+
+        <script src="test/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+		<h1>Payment Methods SVG by <a href="https://github.com/FreshVine/">Fresh Vine</a></h1>
+		<div>
+			<a href="https://github.com/FreshVine/Payment-Methods-SVG">Return to the Github Project page</a>
+		</div>
+
+		<div style="margin-top: 1em; font-size: 1.2em">
+			Check out all of the possible icons below. These are all embedded in their a css library. <br />
+			Click on an icon to see a sample disabled state. The drop shadow on the card version is included on this page, but can easiler be excluded or altered for your needs.
+		</div>
+
+
+		<h2>Icons Marks</h2>
+		<div style="font-size: 80px;">
+			<i class="paymentMethod amex"></i>
+			<i class="paymentMethod dinersClub"></i>
+			<i class="paymentMethod discover"></i>
+			<i class="paymentMethod jcb"></i>
+			<i class="paymentMethod mastercard"></i>
+			<i class="paymentMethod visa"></i>
+		</div>
+
+		<h2>Icons Cards</h2>
+		<div style="font-size: 80px;">
+			<i class="paymentMethod amex paymentMethod-card"></i>
+			<i class="paymentMethod dinersClub paymentMethod-card"></i>
+			<i class="paymentMethod discover paymentMethod-card"></i>
+			<i class="paymentMethod jcb paymentMethod-card"></i>
+			<i class="paymentMethod mastercard paymentMethod-card"></i>
+			<i class="paymentMethod visa paymentMethod-card"></i>
+		</div>
+
+		<h2>Approach Cards</h2>
+		<div style="font-size: 80px;">
+			<i class="paymentMethod applePay paymentMethod-card"></i>
+			<i class="paymentMethod payWithGoogle paymentMethod-card"></i>
+		</div>
+
+        <script src="test/js/main.js"></script>
+		<script>
+			var anchors = document.getElementsByTagName('i');
+			for(var z = 0; z < anchors.length; z++) {
+			    var elem = anchors[z];   
+				if( !elem.classList.contains('paymentMethod') ){ continue; }
+			    elem.onclick = function() {
+					this.classList.toggle('disabled');		
+			        return false;
+			    };
+			}
+		</script>
+    </body>
+</html>
