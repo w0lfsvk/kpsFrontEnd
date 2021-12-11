@@ -50,9 +50,8 @@ def form():
             return redirect(request.url)
     return render_template("/index.html")
         
-
-
 @app.route("/")
+@app.route("/index")
 def index():
     return render_template("/index.html")
 
