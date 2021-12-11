@@ -12,20 +12,20 @@ https://www.dobrezeleziarstvo.sk/
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KPS Index</title>
-  <link rel="icon" type="image" href="/img/KPSlogoNEW_NEW.svg"/>
-  <link rel="stylesheet" href="bulma/css/bulma.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="fontAwesome/css/all.css">
-  <link rel="stylesheet" href="payment/lib/paymentMethods.cards.min.css" type="text/css">
-  <link rel="stylesheet" href="payment/lib/paymentMethods.min.css" type="text/css">
-  <link rel="stylesheet" href="payment/lib/paymentApproaches.all.cards.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ url_for("static",filename="bulma/css/bulma.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="styles.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="fontAwesome/css/all.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.cards.min.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.min.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentApproaches.all.cards.min.css")}}" />
+  <link rel="icon" href="{{ url_for("static",filename="img/KPSlogoNEW_NEW.svg")}}"/>
 </head>
 
 <body style="display: flex; min-height: 100vh; flex-direction:column;">
   <nav class="navbar bannerColor" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="index.html">
-        <img src="img/KPSlogoNEW_NEW.svg" alt="kpsLogoNew">
+      <a class="navbar-item" href="{{ url_for("index")}}">
+        <img src="{{url_for("static",filename="img/KPSlogoNEW_NEW.svg")}}" alt="kpsLogoNew">
       </a>
   
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -37,7 +37,7 @@ https://www.dobrezeleziarstvo.sk/
   
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="contact.html">
+        <a class="navbar-item" href="{{ url_for("contact")}}">
           Kontakt
         </a>
   
@@ -74,7 +74,7 @@ https://www.dobrezeleziarstvo.sk/
           </div>
         </div>
 
-        <a class="navbar-item" href="news.html">
+        <a class="navbar-item" href="{{ url_for("news")}}">
           Novinky
         </a>
         
@@ -92,7 +92,7 @@ https://www.dobrezeleziarstvo.sk/
   <section class="section fontSection" style="flex:1;" >
     <div class="columns has-text-centered">
         <div class="column is-3 is-offset-3">
-            <ul class="has-background-white contactColumn" style="padding-top: 0.25rem; padding-bottom: 0.25rem;">
+            <ul class="contactColor contactColumn" style="padding-top: 0.25rem; padding-bottom: 0.25rem;">
                 <li>
                     <span><i class="fas fa-lg fa-envelope-open-text" style="color: #BB001B;"></i></span>
                     <span><a class="linksContact mobile" href="mailto:kps-trebatice@t-network.sk">e-mail</a></span>
@@ -111,7 +111,7 @@ https://www.dobrezeleziarstvo.sk/
         </div>
 
         <div class="column is-3">
-            <ul class="has-background-white contactColumn" style="padding-top: 0.25rem; padding-bottom: 0.25rem;">
+            <ul class="contactColor contactColumn" style="padding-top: 0.25rem; padding-bottom: 0.25rem;">
                 <li>
                     <span><i class="fab fa-lg fa-facebook-f" style="color: #4267B2;"></i></span>
                     <span><a class="linksContact" href="https://www.facebook.com/zeleziarstvotrebatice/" target="_blank">Facebook</a></span>
@@ -133,7 +133,7 @@ https://www.dobrezeleziarstvo.sk/
 
     <div class="columns has-text-centered">
         <div class="column is-offset-3 is-6">
-          <ul class="has-background-white contactAddress">
+          <ul class="contactColor contactAddress">
             <li style="padding-top: 0.25rem; padding-bottom: 0.25rem;">
                 <span><a class="linksContact" href="https://g.page/zeleziarstvotrebatice?share" target="_blank">Štúrova 263/19, 922 10 Trebatice</a></span>
             </li>
@@ -160,7 +160,7 @@ https://www.dobrezeleziarstvo.sk/
 
 
 
-  <footer class="footer footerBackgrond" style="margin-top: 5rem;">
+  <footer class="footer" style="margin-top: 5rem;">
   <div class="columns is-centered">
     <div class="column is-narrow">
       <ul>
@@ -204,7 +204,7 @@ https://www.dobrezeleziarstvo.sk/
     
   </footer>
   
-  <script type="text/javascript" src="bulma.js"></script>
+  <script type="text/javascript" src="{{url_for("static",filename="bulma.js")}}"></script>
 </body>
 
 </html>

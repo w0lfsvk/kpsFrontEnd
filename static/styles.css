@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* rgb(226, 226, 226); */
+
+::selection {
+    background: black;
+    color: white;
+}
 
 body{
     font-family: 'Noto Sans Mono', monospace;
-    background-color: rgb(226, 226, 226);
-}
-
-.footerBackgrond{
-    background-color: #ffbb00 !important;
+    background-color: rgb(42, 42, 42);
 }
 
 .bannerColor{
@@ -14,18 +16,12 @@ body{
 }
 
 .backgroundColor{
-    background-color: rgb(255, 255, 255);
+    background-color: #ffbb00;
 }
 
-.tabs a{
-    color:black;
+.navbar-menu{
+    background-color: #ffbb00;
 }
-
-.tabs a:hover{
-    color: white;
-    transition: 0.3s;
-}
-
 
 .menuItems{
     font-size: 1.9rem;
@@ -50,8 +46,8 @@ body{
     color: black;
 }
 
-.card{
-    background-color: rgb(255, 255, 255);
+.contactColor{
+    background-color: #ffbb00;
 }
 
 .card-content{
@@ -62,7 +58,7 @@ body{
     min-height: 5rem;
     font-weight: 600;
     font-size: 1.2rem;
-  }
+}
 
 .navbar-item img {
     max-height: 5rem;
@@ -70,6 +66,7 @@ body{
     margin-right: 4rem;
     max-width: 100%;
 }
+
 .buttonBlackBorder, .buttonNoBorder:hover, .buttonNoBorder.is-hovered
 {
     border-color:black;
@@ -81,8 +78,12 @@ body{
 }
 
 a.navbar-item:hover{
-    color: black;
+    color: #3b3b3b;
     background-color: #ffbb00;
+}
+
+a.navbar-item{
+    color: black;
 }
 
 .linksContact{
@@ -96,7 +97,7 @@ a.navbar-item:hover{
 }
 
 .footer{
-    background-color: white;
+    background-color: #ffbb00;
     color: rgb(49, 49, 49);
     padding: 1.75rem 1.5rem;
 }
@@ -111,10 +112,10 @@ a.navbar-item:hover{
 }
 
 .landingImg2{
-    width: 33rem;
-    height: 33rem;
-    max-width: 100%;
-    max-height: 100%;
+    width: auto;
+    height: auto;
+    max-width: 65%;
+    max-height: 65%;
     border-radius: 1.5rem;
     box-shadow: rgb(109, 109, 109) 0px 3px 3px;
 }
@@ -161,12 +162,15 @@ a.navbar-item:hover{
     transition: 0.5s;
 }
 
-.navbar-menu{
-    transition: 0.5s;
-}
 
 .section{
-    padding: 3rem 0rem;
+    /* top | right | bottom | left */
+    padding: 5rem 1rem 3rem 1rem;
+}
+
+.sectionNews{
+          /* top | right | bottom | left */
+    padding: 5rem 2rem 3rem 2rem;
 }
 
 .nadpis{
@@ -177,4 +181,87 @@ a.navbar-item:hover{
 
 .thickText{
     font-weight: 600;
+}
+
+.footerColPad {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.nasaPonukaZoznam{
+    text-align: justify;
+}
+
+.oNasH{
+    text-align: right;
+    padding-bottom: 1rem;
+}
+
+.oNasText{
+    text-align: justify;
+}
+
+.dopyt{
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+          /* top | right | bottom | left */
+          padding: 2rem 2rem 2rem 0rem;
+}
+
+.dopytH{
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+.newsCards{
+    border-radius: 1.5rem;
+    padding: 1rem 0 0 1rem;
+    height: 20rem;
+    box-shadow: rgb(109, 109, 109) 3px 3px 3px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footerColPad{
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    .newsCards{
+        height: auto;
+    }
+
+    .nasaPonuka{
+        border-radius: 2rem;
+    }
+
+    .nasaPonukaZoznam{
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+
+    .oNasH{
+        border-radius: 2rem;
+        text-align: left;
+    }
+    
+    .oNasText{
+        text-align: left;
+        padding-left: 0.5rem;
+    }
+
+    .dopytH{
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        padding-left: 1.5rem;
+    }
+
+    .dopyt{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 2rem;
+        padding-left: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .newsCards{
+        height: auto;        
+    }
 }

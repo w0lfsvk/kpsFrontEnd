@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+https://www.svx.sk/
+https://www.ro-expo.sk/index.html
+https://www.dobrezeleziarstvo.sk/
+ -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KPS Index</title>
+  <link rel="stylesheet" href="{{ url_for("static",filename="bulma/css/bulma.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="styles.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="fontAwesome/css/all.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.cards.min.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.min.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentApproaches.all.cards.min.css")}}" />
+  <link rel="icon" href="{{ url_for("static",filename="img/KPSlogoNEW_NEW.svg")}}"/>
+</head>
+
+<body style="display: flex; min-height: 100vh; flex-direction:column;">
+  <nav class="navbar bannerColor" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ url_for("index")}}">
+        <img src="{{url_for("static",filename="img/KPSlogoNEW_NEW.svg")}}" alt="kpsLogoNew">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="{{ url_for("contact")}}">
+          Kontakt
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item">
+            Sortiment
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Spojovací Materiál
+            </a>
+            <a class="navbar-item">
+              Hutný Materiál
+            </a>
+            <a class="navbar-item">
+              Vodárenský Materiál
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Elektro Materiál
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Šporáky, kachle, dymovina
+            </a>
+            <a class="navbar-item">
+              Pletivá, siete, drôty
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="drogeria.html">
+              Drogéria
+            </a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="{{ url_for("news")}}">
+          Novinky
+        </a>
+        
+      </div>
+  
+      <div class="navbar-end">
+            <a class="navbar-item" href="tel:+421905361241">
+              <strong><p class=" fas fa-phone-alt"></p> 0905 361 241</strong>
+            </a>
+      </div>
+    </div>
+  </nav>
+  </section>
+
+  <section class="sectionNews" style="flex:1;" >
+
+<div class="columns" style="color: black;">
+
+  <div class="column is-4 is-offset-2">
+    <div class="backgroundColor newsCards">
+      <h3 class="title is-3 has-text-black">Ako fungujeme</h3>
+        Vážení zákazníci, na základe nariadenia vlády a hlavného hygienika je naša predajňa opäť otvorená s nasledovnými obmedzeniami:
+
+        <ul>
+          <li>- Maximálne <span class="has-text-weight-bold">1 osoba v predajni</span> (1 osoba na 15m²).</li>
+          <li>- Povinná <span class="has-text-weight-bold">dezinfekcia rúk</span> pred vstupom do predajne.</li>
+          <li>- Prekryté horné dýchacie cesty <span class="has-text-weight-bold">respirátorom triedy FFP2/KN95.</span></li>
+          <li>- Nutnosť dodržiavať <span class="has-text-weight-bold">bezpečnú vzdialenosť</span> minimálne <span class="has-text-weight-bold">2 metre.</span></li>
+        </ul>
+        <br>
+        Ďakujeme za pochopenie a prajeme Vám príjemný nákup.<br>
+        Tím KPS - priemyselný tovar, s.r.o.
+    </div>
+
+  </div>
+  <div class="column  is-4">
+    <div class="backgroundColor newsCards">
+      <h3 class="title is-3 has-text-black">Výdajné miesto Packety</h3>
+      
+      <p>
+        Od 21.06.2021 fungujeme ako výdajné a podacie miesto pre Zásielkovňu. Komfortné doručenie zásielky, 
+        parkovanie pred predajňou v obvyklých otváracích hodinách a dňoch (okrem nedele a pondelka) na Štúrovej ulici u nás v KPS Trebatice.
+      </p>
+
+    <br>
+    <span>Tím KPS - priemyselný tovar, s.r.o.</span>
+      
+    </div>
+  </div>
+</div>
+
+    
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+  <div class="columns is-centered">
+    <div class="column is-narrow">
+      <ul>
+        <li class="nadpis">Kontakt</li>
+        <li>Telefón: 0905 361 241</li>
+        <li>E-mail: kps-trebatice@t-network.sk</li>
+        <li>&nbsp;</li>
+        <li style="font-size: 2.5rem;">
+        <i class="paymentMethod visa paymentMethod-card"></i>
+        <i class="paymentMethod mastercard paymentMethod-card"></i>
+        <i class="paymentMethod payWithGoogle paymentMethod-card"></i>
+        <i class="paymentMethod applePay paymentMethod-card"></i>
+        </li>
+
+        </ul>
+    </div>
+    
+    <div class="column is-narrow">
+      <ul>
+        <li class="nadpis">Kde nás nájdete?</li>
+        <li>KPS Priemyselný tovar s.r.o</li>
+        <li>IČO: 36658243</li>
+        <li>DIČ: 2022225931</li>
+        <li>Štúrova 263/19</li>
+        <li>922 10 Trebatice</li>
+      </ul>
+    </div>
+
+    <div class="column is-narrow">
+      <ul>
+        <li class="nadpis">Otváracie hodiny</li>
+        <li>PO: Zatvorené</li>
+        <li>UT: 8:00-12:30 13:00-16:30</li>
+        <li>ST: 8:00-12:30 13:00-16:30</li>
+        <li>ŠT: 8:00-12:30 13:00-16:30</li>
+        <li>PI: 8:00-12:30 13:00-16:30</li>
+        <li>SO: 8:00-12:30</li>
+        <li>NE: Zatvorené</li>
+      </ul>
+    </div>
+    
+  </footer>
+  
+  <script type="text/javascript" src="{{url_for("static",filename="bulma.js")}}"></script>
+</body>
+
+</html>

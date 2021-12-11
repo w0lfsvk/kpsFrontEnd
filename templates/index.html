@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+https://www.svx.sk/
+https://www.ro-expo.sk/index.html
+https://www.dobrezeleziarstvo.sk/
+ -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KPS Index</title>
+
+  <!--<link rel="icon" type="image" href="img/KPSlogoNEW_NEW.svg"/>
+  <link rel="stylesheet" href="bulma/css/bulma.css">
+  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet" href="fontAwesome/css/all.css">
+  <link rel="stylesheet" href="payment/lib/paymentMethods.cards.min.css" type="text/css">
+  <link rel="stylesheet" href="payment/lib/paymentMethods.min.css" type="text/css">
+  <link rel="stylesheet" href="payment/lib/paymentApproaches.all.cards.min.css" type="text/css">-->
+
+
+
+  <link rel="stylesheet" href="{{ url_for("static",filename="bulma/css/bulma.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="styles.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="fontAwesome/css/all.css")}}" />
+
+  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.cards.min.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.min.css")}}" />
+  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentApproaches.all.cards.min.css")}}" />
+
+  <link rel="icon" href="{{ url_for("static",filename="img/KPSlogoNEW_NEW.svg")}}"/>
+
+  
+
+</head>
+
+<body style="display: flex; min-height: 100vh; flex-direction:column;">
+  <nav class="navbar bannerColor" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ url_for("index")}}">
+        <img src="{{url_for("static",filename="img/KPSlogoNEW_NEW.svg")}}" alt="kpsLogoNew">
+      </a>
+  
+      <a role="button" class="navbar-burger has-dropdown" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBurger" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="{{ url_for("contact")}}">
+          Kontakt
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item">
+            Sortiment
+          </a>
+  
+          <div class="navbar-dropdown is-hidden-mobile">
+            <a class="navbar-item">
+              Spojovací Materiál
+            </a>
+            <a class="navbar-item">
+              Hutný Materiál
+            </a>
+            <a class="navbar-item">
+              Vodárenský Materiál
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Elektro Materiál
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Šporáky, kachle, dymovina
+            </a>
+            <a class="navbar-item">
+              Pletivá, siete, drôty
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="drogeria.html">
+              Drogéria
+            </a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="{{ url_for("news")}}">
+          Novinky
+        </a>
+
+      </div>
+  
+      <div class="navbar-end">
+            <a class="navbar-item is-hidden-mobile" href="tel:+421905361241">
+              <strong><p class=" fas fa-phone-alt"></p> 0905 361 241</strong>
+            </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+  <!-- Notifikacia -->
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+      {% for message in messages %}
+          <div class="notification is-primary">
+            <button class="delete"></button>
+            {{message}}
+          </div>
+      {% endfor %}
+  {% endif %}
+{% endwith %}
+    </div>
+  </div>
+
+
+  <section class="section fontSection" style="flex:1;" >
+    <div class="columns">
+      <div class="column is-1 is-hidden-mobile backgroundColor"></div>
+      <div class="column is-5 backgroundColor nasaPonuka">
+        <h1 class="title is-1 fontSection" style="text-align: left; padding-bottom: 1rem;">
+          <strong>Naša ponuka</strong>
+        </h1>
+        <h2 class="subtitle is-4 fontSection nasaPonukaZoznam">
+          <ul style="list-style-type:circle">
+            <li>Hutný materiál</li>
+            <li>Kanalizačný materiál, liatina</li>
+            <li>Vodárenský, kúrenársky materiál</li>
+            <li>Liatinové, plechové, kompozitné poklopy</li>
+            <li>Spojovací materiál</li>
+            <li>Nástroje, náradie</li>
+            <li>Elektroinštalačný materiál</li>
+            <li>Šporáky, kachle, dymovina</li>
+            <li>Pletivá, siete, drôty</li>
+            <li>Záhradkárske potreby</li>
+            <li>Domáce potreby</li>
+            <li>Drogéria</li>
+            <li>Farby - laky</li>
+          </ul>
+        </h2>
+      </div>
+
+      <div class="column is-5 has-text-right backgroundColor is-hidden-mobile" style="border-top-right-radius: 2rem; border-bottom-right-radius: 2rem;">
+        <figure >
+          <img class="landingImg1 is-inline-block is-hidden-mobile" src="{{url_for("static",filename="photo/fotkaPonukaNew.png")}}" alt="landingImg1">
+        </figure>
+      </div>
+      
+    </div>
+
+    <div class="columns" style="margin-top: 5rem">
+      <div class="column is-1 is-hidden-mobile"></div>
+
+      <div class="column is-5 has-text-left backgroundColor is-hidden-mobile" style="border-top-left-radius: 2rem; border-bottom-left-radius: 2rem;">
+        <figure>
+          <img class="landingImg2 is-inline-block is-hidden-mobile" src="{{url_for("static",filename="photo/fotkaFirmaNew.png")}}" alt="landingImg2">
+        </figure>
+        
+      </div>
+
+      <div class="column is-5 backgroundColor oNasH">
+        <h1 class="title is-1 fontSection">
+          <strong>O nás</strong>
+        </h1>
+        <h2 class="subtitle is-4 fontSection oNasText">
+
+          Firma KPS priemyselný tovar, s.r.o. so sídlom v&nbsp;Trebaticiach, vznikla v roku 2006 a nadviazala na&nbsp;dlhoročnú históriu firmy zakladateľa Viliama Jankecha.
+          Nosným sortimentom naďalej zostal predaj hutného a spojovacieho materiálu, vodárenského, kúrenárskeho a&nbsp;elektro materiálu.
+          V našej maloobchodnej predajni má zastúpenie i náradie, záhradkárske, domáce potreby a&nbsp;krmivá.
+          <br><br>
+          Tešíme sa na vašu návštevu a obchodnú spoluprácu.
+        </h2>
+      </div>
+      <div class="column is-1 is-hidden-mobile backgroundColor"></div> 
+      </div>
+
+      
+      <div class="columns" style="margin-top: 5rem; margin-bottom: 2rem;">
+        <div class="column is-1 is-hidden-mobile backgroundColor"></div>
+        <div class="column is-5 backgroundColor dopytH">
+          <h1 class="title is-1 fontSection">
+            <strong>Dopyt</strong>
+          </h1>
+          <h2 class="subtitle is-4 fontSection">
+           Máte otázku ohľadom sortimentu? Neváhajte sa na nás obrátiť pomocou formulára.
+          </h2>
+        </div>
+  
+        <div class="column is-5 has-text-left backgroundColor dopyt">
+            <!-- <figure class="is-inline-block">
+              <iframe class="landingImg3" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d42221.80714336262!2d17.758529!3d48.593323!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6299a7824b563ec0!2sKPS%20-%20priemyseln%C3%BD%20tovar%2C%20s.r.o.!5e0!3m2!1sen!2sus!4v1614808582117!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </figure> -->
+
+      <form action="#" method="POST" class="form">
+          <div class="field">
+            <label class="label">Meno</label>
+            <div class="control">
+              <input class="input" type="text" name="name" placeholder="Meno">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">e-mail</label>
+            <div class="control">
+              <input class="input" type="text" name="mail" placeholder="e-mail">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Telefón</label>
+            <div class="control">
+              <input class="input" type="text" name="phone" placeholder="Telefónne číslo (nepovinné)">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Správa</label>
+            <div class="control">
+              <textarea class="textarea"  type="text" name="message" placeholder="Správa"></textarea>
+            </div>
+          </div>
+
+          <button class="button is-black" type="submit" value="submit" name="buttonTest">Odoslať správu</button>
+    </form>
+
+
+      </div>
+ 
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+  <div class="columns is-centered">
+    <div class="column is-narrow">
+      <ul>
+        <li class="nadpis">Kontakt</li>
+        <li>Telefón: 0905 361 241</li>
+        <li>E-mail: kps-trebatice@t-network.sk</li>
+        <li>&nbsp;</li>
+        <li style="font-size: 2.5rem;">
+        <i class="paymentMethod visa paymentMethod-card"></i>
+        <i class="paymentMethod mastercard paymentMethod-card"></i>
+        <i class="paymentMethod payWithGoogle paymentMethod-card"></i>
+        <i class="paymentMethod applePay paymentMethod-card"></i>
+        </li>
+
+        </ul>
+    </div>
+
+
+
+    <div class="column is-narrow footerColPad">
+      <ul>
+        <li class="nadpis">Kde nás nájdete?</li>
+        <li>KPS Priemyselný tovar s.r.o</li>
+        <li>IČO: 36658243</li>
+        <li>DIČ: 2022225931</li>
+        <li>Štúrova 263/19</li>
+        <li>922 10 Trebatice</li>
+      </ul>
+    </div>
+
+    <div class="column is-narrow">
+      <ul>
+        <li class="nadpis">Otváracie hodiny</li>
+        <li>PO: Zatvorené</li>
+        <li>UT: 8:00-12:30 13:00-16:30</li>
+        <li>ST: 8:00-12:30 13:00-16:30</li>
+        <li>ŠT: 8:00-12:30 13:00-16:30</li>
+        <li>PI: 8:00-12:30 13:00-16:30</li>
+        <li>SO: 8:00-12:30</li>
+        <li>NE: Zatvorené</li>
+      </ul>
+    </div>
+    
+  </footer>
+
+  <script type="text/javascript" src="{{url_for("static",filename="bulma.js")}}"></script>
+  <script type="text/javascript" src="{{url_for("static",filename="delete.js")}}"></script>
+
+</body>
+
+
+</html>
