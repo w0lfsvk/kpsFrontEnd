@@ -33,7 +33,7 @@ def form():
 
 
         msg= EmailMessage()
-        msg.set_content(name+"\n"+phone+"\n"+mail+"\n"+message)
+        msg.set_content("Meno: "+name+"\n"+"Tel. č: "+phone+"\n"+"Mail: "+mail+"\n"+message)
 
         msg["Subject"] = "Dopyt Web "+name
         msg["From"] = config.email

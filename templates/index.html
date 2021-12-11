@@ -1,39 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!--
-https://www.svx.sk/
-https://www.ro-expo.sk/index.html
-https://www.dobrezeleziarstvo.sk/
- -->
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KPS Index</title>
 
-  <!--<link rel="icon" type="image" href="img/KPSlogoNEW_NEW.svg"/>
-  <link rel="stylesheet" href="bulma/css/bulma.css">
-  <link rel="stylesheet" href="styles.css"> 
-  <link rel="stylesheet" href="fontAwesome/css/all.css">
-  <link rel="stylesheet" href="payment/lib/paymentMethods.cards.min.css" type="text/css">
-  <link rel="stylesheet" href="payment/lib/paymentMethods.min.css" type="text/css">
-  <link rel="stylesheet" href="payment/lib/paymentApproaches.all.cards.min.css" type="text/css">-->
-
-
-
   <link rel="stylesheet" href="{{ url_for("static",filename="bulma/css/bulma.css")}}" />
   <link rel="stylesheet" href="{{ url_for("static",filename="styles.css")}}" />
   <link rel="stylesheet" href="{{ url_for("static",filename="fontAwesome/css/all.css")}}" />
-
   <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.cards.min.css")}}" />
   <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.min.css")}}" />
   <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentApproaches.all.cards.min.css")}}" />
-
   <link rel="icon" href="{{ url_for("static",filename="img/KPSlogoNEW_NEW.svg")}}"/>
-
-  
 
 </head>
 
@@ -57,12 +36,12 @@ https://www.dobrezeleziarstvo.sk/
           Kontakt
         </a>
   
-        <div class="navbar-item has-dropdown is-hoverable">
+                <!--<div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-item">
             Sortiment
           </a>
   
-          <div class="navbar-dropdown is-hidden-mobile">
+          <div class="navbar-dropdown">
             <a class="navbar-item">
               Spojovací Materiál
             </a>
@@ -88,7 +67,7 @@ https://www.dobrezeleziarstvo.sk/
               Drogéria
             </a>
           </div>
-        </div>
+        </div> -->
 
         <a class="navbar-item" href="{{ url_for("news")}}">
           Novinky
@@ -104,24 +83,23 @@ https://www.dobrezeleziarstvo.sk/
     </div>
   </nav>
 
-  <div class="columns">
-    <div class="column is-half is-offset-one-quarter">
-  <!-- Notifikacia -->
-  {% with messages = get_flashed_messages() %}
-  {% if messages %}
-      {% for message in messages %}
-          <div class="notification is-primary">
-            <button class="delete"></button>
-            {{message}}
-          </div>
-      {% endfor %}
-  {% endif %}
-{% endwith %}
-    </div>
-  </div>
-
-
   <section class="section fontSection" style="flex:1;" >
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter">
+    <!-- Notifikacia -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="notification is-primary">
+              <button class="delete"></button>
+              {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+  {% endwith %}
+      </div>
+    </div>
+
     <div class="columns">
       <div class="column is-1 is-hidden-mobile backgroundColor"></div>
       <div class="column is-5 backgroundColor nasaPonuka">
@@ -232,16 +210,7 @@ https://www.dobrezeleziarstvo.sk/
 
 
       </div>
- 
   </section>
-
-
-
-
-
-
-
-
 
 
   <footer class="footer">

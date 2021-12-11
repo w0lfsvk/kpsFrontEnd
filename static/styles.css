@@ -165,7 +165,7 @@ a.navbar-item{
 
 .section{
     /* top | right | bottom | left */
-    padding: 5rem 1rem 3rem 1rem;
+    padding: 4rem 1rem 3rem 1rem;
 }
 
 .sectionNews{
@@ -214,9 +214,9 @@ a.navbar-item{
 
 .newsCards{
     border-radius: 1.5rem;
-    padding: 1rem 0 0 1rem;
     height: 20rem;
     box-shadow: rgb(109, 109, 109) 3px 3px 3px;
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 @media only screen and (max-width: 768px) {
