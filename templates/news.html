@@ -5,36 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KPS Index</title>
-  <link rel="stylesheet" href="{{ url_for("static",filename="bulma/css/bulma.css")}}" />
-  <link rel="stylesheet" href="{{ url_for("static",filename="styles.css")}}" />
-  <link rel="stylesheet" href="{{ url_for("static",filename="fontAwesome/css/all.css")}}" />
-  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.cards.min.css")}}" />
-  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentMethods.min.css")}}" />
-  <link rel="stylesheet" href="{{ url_for("static",filename="payment/lib/paymentApproaches.all.cards.min.css")}}" />
-  <link rel="icon" href="{{ url_for("static",filename="img/KPSlogoNEW_NEW.svg")}}"/>
+  <link rel="stylesheet" href="static/bulma/css/bulma.css" />
+  <link rel="stylesheet" href="static/styles.css" />
+  <link rel="stylesheet" href="static/fontAwesome/css/all.css" />
+  <link rel="stylesheet" href="static/payment/lib/paymentMethods.cards.min.css" />
+  <link rel="stylesheet" href="static/payment/lib/paymentMethods.min.css" />
+  <link rel="stylesheet" href="static/payment/lib/paymentApproaches.all.cards.min.css" />
+  <link rel="icon" href="static/img/KPSlogoNEW_NEW.svg"/>
 </head>
 
 <body style="display: flex; min-height: 100vh; flex-direction:column;">
   <nav class="navbar bannerColor" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{ url_for("index")}}">
-        <img src="{{url_for("static",filename="img/KPSlogoNEW_NEW.svg")}}" alt="kpsLogoNew">
+      <a class="navbar-item" href="/">
+        <img src="static/img/KPSlogoNEW_NEW.svg" alt="kpsLogoNew">
       </a>
   
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <a role="button" class="navbar-burger has-dropdown" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
   
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbarBurger" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="{{ url_for("contact")}}">
+        <a class="navbar-item" href="/contact">
           Kontakt
         </a>
   
-        <!--<div class="navbar-item has-dropdown is-hoverable">
+                <!--<div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-item">
             Sortiment
           </a>
@@ -67,14 +67,14 @@
           </div>
         </div> -->
 
-        <a class="navbar-item" href="{{ url_for("news")}}">
+        <a class="navbar-item" href="/news">
           Novinky
         </a>
-        
+
       </div>
   
       <div class="navbar-end">
-            <a class="navbar-item" href="tel:+421905361241">
+            <a class="navbar-item is-hidden-mobile" href="tel:+421905361241">
               <strong><p class=" fas fa-phone-alt"></p> 0905 361 241</strong>
             </a>
       </div>
@@ -165,7 +165,7 @@
     
   </footer>
   
-  <script type="text/javascript" src="{{url_for("static",filename="bulma.js")}}"></script>
+  <script type="text/javascript" src="static/bulma.js"></script>
 </body>
 
 </html>
