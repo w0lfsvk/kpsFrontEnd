@@ -200,6 +200,10 @@ a.navbar-item{
     text-align: justify;
 }
 
+.indexContent{
+    font-size: 1.5rem;
+}
+
 .dopyt{
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
@@ -217,6 +221,22 @@ a.navbar-item{
     height: 20rem;
     box-shadow: rgb(109, 109, 109) 3px 3px 3px;
     padding: 1rem 1rem 1rem 1rem;
+}
+
+.sectionGallery{
+          /* top | right | bottom | left */
+    padding: 4rem 1rem 3rem 1rem;
+}
+
+.gallery{
+    border-radius: 1.5rem;
+    /* transform: scale(0.6); */
+}
+
+.gallery:hover{
+    box-shadow: rgb(109, 109, 109) 3px 3px 3px;
+    transform: scale(1.03);
+    cursor:pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -247,6 +267,10 @@ a.navbar-item{
         padding-left: 0.5rem;
     }
 
+    .indexContent{
+        font-size: 1.2rem;
+    }
+
     .dopytH{
         border-top-right-radius: 2rem;
         border-top-left-radius: 2rem;
@@ -261,6 +285,12 @@ a.navbar-item{
 }
 
 @media only screen and (max-width: 1024px) {
+    .newsCards{
+        height: auto;        
+    }
+}
+
+@media only screen and (max-width: 1700px) {
     .newsCards{
         height: auto;        
     }

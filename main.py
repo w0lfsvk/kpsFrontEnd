@@ -17,6 +17,7 @@ database_csv = "database.csv"
 if not Path(database_csv).exists():
     Path(database_csv).touch()
 
+@app.route("/index",methods=["POST"])
 @app.route("/",methods=["POST"])
 def form():
     if request.method == "POST":
@@ -63,6 +64,10 @@ def contact():
 def news():
     return render_template("/news.html")
 
+@app.route("/gallery")
+def gallery():
+    return render_template("/gallery.html")
+    
 if __name__=="__main__":
     app.debug= True
     app.run(host="0.0.0.0")
